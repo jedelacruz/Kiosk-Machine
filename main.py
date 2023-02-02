@@ -1,8 +1,5 @@
 #still in development
 
-global total
-
-
 def start():
     start = input("press any key to start")
     print()
@@ -62,7 +59,7 @@ def mainMenu():
         print()
         print(" --- --- --- --- please type the number of your choice --- --- --- --- ")
         print()
-        print("(1) Combo Meals")
+        print("(1) Main Dish")
         print("(2) Burgers")
         print("(3) Fries and Add ons")
         print("(4) Beverages")
@@ -71,9 +68,9 @@ def mainMenu():
 
         mainMenuChoice = input("Choice: ")
         if(mainMenuChoice == "1"):
-            print("Meal: Combo Meals")
+            print("Meal: Main Dish")
             print()
-            print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ COMBO MEAL MENU ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
+            print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ MAIN DI SH MENU ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
             print()
             print(" --- --- --- --- please type the number of your choice --- --- --- --- ")
             print()
@@ -121,13 +118,11 @@ def mainMenu():
 
 #displays the combo meal menu section
 def comboMealsMenu():
-    global total
     cld = 200
     cln = 150
     cf = 150
     mps = 100
     total = 0
-
     while True:
         print("    MAIN DISH")
         print()
@@ -142,25 +137,25 @@ def comboMealsMenu():
             print("Order: Chicken LycDonald")
             quantity = int(input("Quantity: "))
             total += quantity * cld
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (comboMealsMenuChoice == "2"):
             print("Order: Chicken LycNuggets")
             quantity = int(input("Quantity: "))
             total += quantity * cln
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (comboMealsMenuChoice == "3"):
             print("Order: Chicken Fillet")
             quantity = int(input("Quantity: "))
             total += quantity * cf
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (comboMealsMenuChoice == "4"):
             print("Order: Mushroom Pepper Steak")
             quantity = int(input("Quantity: "))
             total += quantity * mps
-            orderMore()
+            print("Total:" + str(total))
             break
         else:
             print("Invalid choice, please choose again")
@@ -174,7 +169,6 @@ def burgerMealsMenu():
     dcheeseburger = 100
     cheeseburger = 70
     total = 0
-
     while True:
         print("    BURGERS")
         print()
@@ -190,31 +184,31 @@ def burgerMealsMenu():
             print("Order: Big Mac")
             quantity = int(input("Quantity: "))
             total += quantity * bigmac
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (burgerMenuChoice == "2"):
             print("Order: LycCrispy Chicken Sandwich")
             quantity = int(input("Quantity: "))
             total += quantity * crispyChicken
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (burgerMenuChoice == "3"):
             print("Order: LycSpicy Chicken Sandwich")
             quantity = int(input("Quantity: "))
             total += quantity * spicyChicken
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (burgerMenuChoice == "4"):
             print("Order: Double Cheeseburger")
             quantity = int(input("Quantity: "))
             total += quantity * dcheeseburger
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (burgerMenuChoice == "5"):
             print("Order: Cheeseburger Meal")
             quantity = int(input("Quantity: "))
             total += quantity * cheeseburger
-            orderMore()
+            print("Total:" + str(total))
             break
         else:
             print("Invalid choice, please choose again")
@@ -243,31 +237,31 @@ def friesMealsMenu():
             print("Order: Shake Shake Fries BBQ")
             quantity = int(input("Quantity: "))
             total += quantity * ssfbbq
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (friesMenuChoice == "2"):
             print("Order: Shake Shake Fries Cheese")
             quantity = int(input("Quantity: "))
             total += quantity * ssfc
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (friesMenuChoice == "3"):
             print("Order: Fries")
             quantity = int(input("Quantity: "))
             total += quantity * fries
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (friesMenuChoice == "4"):
             print("Order: Creamy Mushroom Soup")
             quantity = int(input("Quantity: "))
             total += quantity * cms
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (friesMenuChoice == "5"):
             print("Order: Creamy Garlic Soup")
             quantity = int(input("Quantity: "))
             total += quantity * cgs
-            orderMore()
+            print("Total:" + str(total))
             break
         else:
             print("Invalid choice, please choose again")
@@ -300,43 +294,43 @@ def beverageMealsMenu():
             print("Order: LycFlurry Oreo")
             quantity = int(input("Quantity: "))
             total += quantity * lfo
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (beverageMenuChoice == "2"):
             print("Order: LycFloat")
             quantity = int(input("Quantity: "))
             total += quantity * lf
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (beverageMenuChoice == "3"):
             print("Order: Sundae")
             quantity = int(input("Quantity: "))
             total += quantity * sundae
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (beverageMenuChoice == "4"):
             print("Order: Iced Tea")
             quantity = int(input("Quantity: "))
             total += quantity * icet
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (beverageMenuChoice == "5"):
             print("Order: Orange Juice")
             quantity = int(input("Quantity: "))
             total += quantity * orangej
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (beverageMenuChoice == "6"):
             print("Order: Coke")
             quantity = int(input("Quantity: "))
             total += quantity * coke
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (beverageMenuChoice == "7"):
             print("Order: Sprite")
             quantity = int(input("Quantity: "))
             total += quantity * sprite
-            orderMore()
+            print("Total:" + str(total))
             break
         else:
             print("Invalid choice, please choose again")
@@ -359,39 +353,17 @@ def pastaMealsMenu():
             print("Order: Creamy Sweet Spaghetti")
             quantity = int(input("Quantity: "))
             total += quantity * css
-            orderMore()
+            print("Total:" + str(total))
             break
         elif (pastaMenuChoice == "2"):
             print("Order: Ricotta Carbonara")
             quantity = int(input("Quantity: "))
             total += quantity * rc
-            orderMore()
+            print("Total:" + str(total))
             break
         else:
             print("Invalid choice, please choose again")
             print()
-
-def orderMore():
-    while True:
-        print("Do you want to order more?")
-        print("(1) Yes")
-        print("(2) No")
-        orderMoreChoice = input()
-        if(orderMoreChoice == "1"):
-            print("Choice: Yes")
-            print()
-            mainMenu()
-            break
-        elif(orderMoreChoice == "2"):
-            print("Choice: No")
-            print()
-            print("Total: " + str(total))
-            break
-        else:
-            print("Invalid choice, please choose again")
-            print()
-
-
 
 start()
 dinePlace()
